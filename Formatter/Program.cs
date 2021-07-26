@@ -73,3 +73,43 @@ namespace Formatter
     {
     }
 }
+
+//for Spaces \Around braces (Before single line accessors block, Within single line accessors, Between accessors in single line property/event,
+//Space between empty braces, Within single line method, Within single line anonymous method, Within single-line expression braces)
+namespace CaT
+{
+    class cat
+    {
+        public class Cat
+        {
+            public int Age { get; set; }
+
+            public string Name { get; set; }
+
+            public Cat()
+            {
+            }
+
+            public Cat(string name)
+            {
+                this.Name = name;
+            }
+
+            public void FeedCat(string name)
+            {
+                int a = 1;
+            }
+
+            public void CallCat(int a, int b, int c)
+            {
+                int d = a + b + c;
+            }
+        }
+
+        EventHandler e = delegate { return; };
+
+        Cat anothercat = new Cat { Age = 10, Name = "Fluffy" };
+
+        Cat sameCat = new Cat("Fluffy") { Age = 10 };
+    }
+}

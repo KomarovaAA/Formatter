@@ -1,9 +1,9 @@
 ﻿// Formatter
 
-using CaT;
+
 using System;
 using System.Collections.Generic;
-using static CaT.cat;
+
 
 namespace Formatter
 {
@@ -674,34 +674,3 @@ namespace Formatter
     }
 }
 
-namespace CaT
-{
-    class cat
-    {
-        public class Cat
-        {
-            public int Age { get; set; }
-
-            public string Name { get; set; }
-
-            public Cat()
-            {
-            }
-
-            public Cat(string name)
-            {
-                this.Name = name;
-            }
-
-            public void FeedCat(string name)
-            {
-                int a = 1;
-            }
-
-            public void CallCat(int a, int b, int c)
-            {
-                int d = a + b + c;
-            }
-        }
-    }
-}
