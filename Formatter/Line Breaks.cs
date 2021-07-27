@@ -44,7 +44,7 @@ namespace Formatter
                 {
                     int two = 2;
                 }
-            }
+            }  
         }
 
         //TODO Line Breaks/Arrangement of attributes

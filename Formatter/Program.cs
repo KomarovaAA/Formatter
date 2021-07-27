@@ -16,6 +16,7 @@ namespace Formatter
             Console.WriteLine("Hello World!");
 
             {
+                //TODO Tabs, Indents, Alignment/Other Indents(Outdent statement labels﻿)
                 //for Tabs, Indents, Alignment/Other Indents(Outdent statement labels﻿)
 
                 //*label(tabs)*
@@ -25,6 +26,7 @@ namespace Formatter
                 if (a > 0) goto MyLabel;
             }
 
+            //TODO Line Breaks/Arrangement of invocations﻿
             //for Line Breaks/Arrangement of invocations﻿(Wrap invocation arguments﻿, Max invocation arguments on a single line﻿,
             //Keep existing arrangement of parenthesis in invocation, Prefer wrap before "(" in invocation, Prefer wrap after "(" in invocation,
             //Prefer wrap before ")" in invocation)
@@ -36,6 +38,7 @@ namespace Formatter
                 2,
                 3);
 
+            //TODO Line Breaks \ Arrangement of ternary expressions
             //for Line Breaks \ Arrangement of ternary expressions(Nested ternary expression style)
             //Nested ternary expression style
             a = i ? "am" : you ? "are" : "is";
@@ -74,6 +77,7 @@ namespace Formatter
     }
 }
 
+//TODO Spaces \Around braces
 //for Spaces \Around braces (Before single line accessors block, Within single line accessors, Between accessors in single line property/event,
 //Space between empty braces, Within single line method, Within single line anonymous method, Within single-line expression braces)
 namespace CaT
