@@ -9,6 +9,7 @@ namespace Formatter
 {
     public class Blank_Lines
     {
+        //TODO Blank Lines/General
         public abstract class General
         {
             //for General(Around regions, Inside regions, Before single line comment)
@@ -26,6 +27,7 @@ namespace Formatter
             //single line comment
         }
 
+        //TODO Blank Lines/Blank Lines In Code
         public abstract class BlankLinesInCode
         {
             //for Blank lines in code(Keep max blank lines in code, Remove blank lines after "{" and before "}" in code﻿,
@@ -88,6 +90,7 @@ namespace Formatter
             }
         }
 
+        //TODO Blank Lines/Blank Lines In Declaration
         public abstract class BlankLinesInDeclaration
         {
             //for Blank lines in declarations(Keep max blank lines in declarations, Remove blank lines after { and before } in declarations,
@@ -188,11 +191,12 @@ namespace Formatter
 
             private void Function1()
             {
-                throw new NotImplementedException();
+                
             }
         }
     }
 }
+
 
 //for Blank Lines In Declarations(﻿Around namespace﻿, Inside namespace)
 

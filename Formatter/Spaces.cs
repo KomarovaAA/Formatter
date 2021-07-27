@@ -10,9 +10,27 @@ namespace Formatter
 
     public class Spaces
     {
+        //TODO Spaces/Preserve existing formatting
+        public class PreserveExistingFormatting
+        {
+            private static object foo(int v)
+            {
+                throw new NotImplementedException();
+            }
+
+            //for Preserve existing formatting(Extra spaces inside)
+            
+            object x = foo(5);
+            object xx = foo(5 + 6);
+            object xxx = foo(5 + 6 + 7);
+            object tab = foo(5);
+            object tabx = foo(5 + 6);
+            object tabxx = foo(5 + 6 + 7);
+        }
+
+        //TODO Spaces/Before parentheses in statements
         public class BeforeParenthesesInStatements﻿
         {
-
             // for Before parentheses in statements﻿("if" parentheses﻿, "while" parentheses﻿, "catch" parentheses, switch" parentheses﻿,
             // "for" parentheses﻿, using" parentheses﻿,
             //"foreach" parentheses, lock" parentheses, "fixed" parentheses﻿﻿)
@@ -116,7 +134,9 @@ namespace Formatter
             {
                 public void F(T t)
                 {
-                    using (t) { }
+                    using (t)
+                    {
+                    }
                 }
             }
 
@@ -129,15 +149,15 @@ namespace Formatter
 
             private void foo2(int var1, int var2)
             {
-                throw new NotImplementedException();
+                int var3 = var1 + var2;
             }
 
             private void foo()
             {
-                throw new NotImplementedException();
             }
         }
 
+        //TODO Spaces/Before other parentheses
         public class BeforeOtherParentheses
         {
             //for Before other parentheses(Method call parentheses﻿, Method call empty parentheses﻿,  Method declaration parentheses﻿,
@@ -167,7 +187,7 @@ namespace Formatter
 
             //*CHECKED & UNCHECKED*
             int fooC(int firstParameter,
-                int secondParameter)
+                     int secondParameter)
             {
                 return checked(100000 * 10000) + unchecked(10000 * 10000);
             }
@@ -177,7 +197,7 @@ namespace Formatter
                        int secondParameter)
             {
                 fooC(firstParameter,
-                     secondParameter);
+                    secondParameter);
                 foo();
             }
 
@@ -193,6 +213,7 @@ namespace Formatter
             }
         }
 
+        //TODO Spaces/Within parentheses in statements
         public class WithinParenthesesInStatements
         {
             //for Within parentheses in statements("if" parentheses﻿, "while" parentheses﻿, "catch" parentheses, switch" parentheses﻿,
@@ -298,7 +319,9 @@ namespace Formatter
             {
                 public void F(T t)
                 {
-                    using (t) { }
+                    using (t)
+                    {
+                    }
                 }
             }
 
@@ -311,15 +334,15 @@ namespace Formatter
 
             private void foo2(int var1, int var2)
             {
-                throw new NotImplementedException();
+                int var3 = var1 + var2;
             }
 
             private void foo()
             {
-                throw new NotImplementedException();
             }
         }
 
+        //TODO Spaces/Withing Other Parentheses
         public class WithinOtherParentheses
         {
             //for Withing Other Parentheses(Parentheses﻿, Type cast parentheses, Method call parentheses﻿,
@@ -377,6 +400,7 @@ namespace Formatter
             }
         }
 
+        //TODO Spaces/Around array brackets
         public class AroundArrayBrackets
         {
             //for Around array brackets(Before array access brackets﻿, Before array rank brackets, Within array access brackets,
@@ -394,12 +418,13 @@ namespace Formatter
                 for (int i = 0; i < 5; i++)
                 {
                     array[i] = array[i + 1];
-
                 }
+
                 int[][,] x = null;
             }
         }
 
+        //TODO Spaces/Around angle brackets
         public class AroundAngleBrackets
         {
             //for Around angle brackets﻿(Before type parameter list angle, Before type argument list angle﻿, Type parameter angles
@@ -421,6 +446,7 @@ namespace Formatter
             //in the Program.cs file
         }
 
+        //TODO Spaces/Around binary operators
         public class AroundBinaryOperators
         {
             // for Around binary operators(Assignment operators (=,+=,...)﻿, Logical operators(&&,||), Equality operators(==,!=),
@@ -431,7 +457,6 @@ namespace Formatter
             {
                 void binary_unary_spaces()
                 {
-
                     bool a = true;
                     bool b = false;
                     int c = +1;
@@ -445,8 +470,8 @@ namespace Formatter
                         x = x ?? x;
                         c++;
                         --c;
-
                     }
+
                     if (!a) return;
 
                     bool expr = true;
@@ -457,9 +482,9 @@ namespace Formatter
                             case true: return 1;
                             case false: return 0;
                         }
-
                     }
                 }
+
                 class C1<T1,
                     T2,
                     T3>
@@ -478,17 +503,18 @@ namespace Formatter
 
                 private void Method1(int arg1, int arg2)
                 {
-                    throw new NotImplementedException();
+                    int arg3 = arg1 + arg2;
                 }
-
             }
 
             public struct Coords
             {
                 public int X;
                 public int Y;
+
                 public override string ToString() => $"({X}, {Y})";
             }
+
             public class PointerMemberAccessExample
             {
                 public static unsafe void F1()
@@ -498,11 +524,12 @@ namespace Formatter
                     Coords p1 = *p;
                     p->X = 3;
                     p->Y = 4;
-                    Console.WriteLine(p->ToString());  // output: (3, 4)
+                    Console.WriteLine(p->ToString()); // output: (3, 4)
                 }
             }
         }
 
+        //TODO Spaces/Around unary operators
         public class AroundUnaryOperators
         {
             //for Around unary operators(Logical not operator (!)﻿, Unary minus operator (-), Unary plus operator (+),
@@ -511,7 +538,6 @@ namespace Formatter
             {
                 void binary_unary_spaces()
                 {
-
                     bool a = true;
                     bool b = false;
                     int c = +1;
@@ -525,8 +551,8 @@ namespace Formatter
                         x = x ?? x;
                         c++;
                         --c;
-
                     }
+
                     if (!a) return;
 
                     bool expr = true;
@@ -544,6 +570,7 @@ namespace Formatter
                 {
                     public int X;
                     public int Y;
+
                     public override string ToString() => $"({X}, {Y})";
                 }
 
@@ -556,7 +583,7 @@ namespace Formatter
                         Coords p1 = *p;
                         p->X = 3;
                         p->Y = 4;
-                        Console.WriteLine(p->ToString());  // output: (3, 4)
+                        Console.WriteLine(p->ToString()); // output: (3, 4)
                     }
                 }
 
@@ -570,11 +597,12 @@ namespace Formatter
 
                 private void Method1(int arg1, int arg2)
                 {
-                    throw new NotImplementedException();
+                    int arg3 = arg1 + arg2;
                 }
             }
         }
 
+        //TODO Spaces/In ternary operator
         public class InTernaryOperator
         {
             //for In ternary operator(Before '?'﻿,After '?',Before ':',After ':' )
@@ -582,9 +610,12 @@ namespace Formatter
             //*ternary expressions*
             int x1 = true ? 1 : 0;
         }
+
+        //TODO Spaces/Around comma and semicolon
         public class AroundCommaAndSemicolon
         {
-            // for Around comma and semicolon(Before semicolon﻿, After semicolon, Before semicolon)
+            // for Around comma and semicolon(Before comma, After comma, Before semicolon, Before "for" semicolon,
+            // After "for" semicolon)
 
             [return: Description("returns A")]
             public Spaces b()
@@ -594,12 +625,23 @@ namespace Formatter
                 return null;
             }
 
+            void for_()
+            {
+                for (int i = 1; i < 10; i++)
+                {
+                    i++;
+                }
+            }
+           
+
+
             private void Method1(int arg1, int arg2)
             {
-                throw new NotImplementedException();
+                int arg3 = arg1 + arg2;
             }
         }
 
+        //TODO Spaces/Around colon
         public class AroundColon
         {
             //for Around colon(Before base types list colon, After base types list colon﻿, Before type parameter constraint colon,
@@ -610,7 +652,6 @@ namespace Formatter
             {
                 void binary_unary_spaces()
                 {
-
                     bool a = true;
                     bool b = false;
                     int c = +1;
@@ -624,8 +665,8 @@ namespace Formatter
                         x = x ?? x;
                         c++;
                         --c;
-
                     }
+
                     if (!a) return;
 
                     bool expr = true;
@@ -636,9 +677,9 @@ namespace Formatter
                             case true: return 1;
                             case false: return 0;
                         }
-
                     }
                 }
+
                 class C1<T1,
                     T2,
                     T3>
@@ -657,12 +698,12 @@ namespace Formatter
 
                 private void Method1(int arg1, int arg2)
                 {
-                    throw new NotImplementedException();
+                    int arg3 = arg1 + arg2;
                 }
-
             }
         }
 
+        //TODO Spaces/Attributes
         public class Attributes
         {
             //for Attributes(Between attribute sections, Within attribute brackets, After attributes﻿)
@@ -671,6 +712,7 @@ namespace Formatter
             class C
             {
             }
+
             internal class Attr2Attribute : Attribute
             {
                 private bool v;
@@ -680,14 +722,16 @@ namespace Formatter
                     this.v = v;
                 }
             }
+
             internal class Attr1Attribute : Attribute
             {
             }
 
             abstract class A
             {
-                extern int Method1([System.Diagnostics.CodeAnalysis.NotNull][ItemNotNull] IList<string> items);
-
+                extern int Method1(
+                    [System.Diagnostics.CodeAnalysis.NotNull] [ItemNotNull]
+                    IList<string> items);
             }
 
             internal class ItemNotNullAttribute : Attribute
@@ -698,18 +742,19 @@ namespace Formatter
             {
                 [Attr1]
                 void foo();
+
                 int Property1
                 {
                     [Attr1]
                     get;
                 }
             }
+
             interface I1
             {
                 [Attr1]
                 int Property { get; }
             }
-
 
             class D
             {
@@ -723,13 +768,19 @@ namespace Formatter
             }
         }
 
+        //TODO Spaces/Others
         public class Others
         {
             //for Others(Around dot, Around lambda arrow, Before unsafe pointer declaration,
-            //Before nullable mark﻿, Before end of line comment﻿, After operator keyword﻿,
+            //Before nullable mark﻿, Before end of line comment﻿, After operator keyword﻿, After type cast parentheses
             //)
 
             private Func<object, object> c;
+
+            //**
+            private static double b = 10.5;
+            int d = (int)b;
+
             public class PointerMemberAccessExample
             {
                 public static unsafe void F1()
@@ -739,14 +790,14 @@ namespace Formatter
                     AroundBinaryOperators.Coords p1 = *p;
                     p->X = 3;
                     p->Y = 4;
-                    Console.WriteLine(p->ToString());  // output: (3, 4)
+                    Console.WriteLine(p->ToString()); // output: (3, 4)
                 }
             }
+
             internal class a
             {
                 internal static void foo()
                 {
-                    throw new NotImplementedException();
                 }
             }
 
@@ -755,7 +806,6 @@ namespace Formatter
                 a.foo();
                 c = x => x;
                 int? i = null;
-
             }
 
             //*After operator keyword*
@@ -768,17 +818,22 @@ namespace Formatter
                 {
                     if (denominator == 0)
                     {
-                        throw new ArgumentException("Denominator cannot be zero.", nameof(denominator));
+                        throw new ArgumentException(
+                            "Denominator cannot be zero.", nameof(denominator));
                     }
+
                     num = numerator;
                     den = denominator;
                 }
 
                 public static Fraction operator +(Fraction a) => a;
-                public static Fraction operator -(Fraction a) => new Fraction(-a.num, a.den);
+
+                public static Fraction operator -(Fraction a) =>
+                    new Fraction(-a.num, a.den);
 
                 public static Fraction operator +(Fraction a, Fraction b)
-                    => new Fraction(a.num * b.den + b.num * a.den, a.den * b.den);
+                    => new Fraction(a.num * b.den + b.num * a.den,
+                        a.den * b.den);
 
                 public static Fraction operator -(Fraction a, Fraction b)
                     => a + (-b);
@@ -792,6 +847,7 @@ namespace Formatter
                     {
                         throw new DivideByZeroException();
                     }
+
                     return new Fraction(a.num * b.den, a.den * b.num);
                 }
 
@@ -809,8 +865,7 @@ namespace Formatter
     }
 }
 
-
-//for for Others(Around '=' in namespace alias directive)
+//for Others(Around '=' in namespace alias directive)
 
 namespace W
 {
@@ -827,5 +882,4 @@ namespace W
             } &&
             sourceObject is MyType { F1: 1, F2: 2 };
     }
-
 }

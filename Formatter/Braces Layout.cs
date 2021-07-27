@@ -1,10 +1,12 @@
 ﻿// Formatter
 
 //for Braces Layout(Indent inside namespace declaration, Type and namespace declaration﻿)
+
 using System;
 
 namespace Formatter
 {
+    //TODO Braces Layout
     public class Braces_Layout
     {
         //for Braces Layout(Method declaration, Lambda and delegate (anonymous method declaration), Property Declaration,
@@ -15,7 +17,7 @@ namespace Formatter
         public int X { get; set; }
 
         // *accessor*
-        public int Y 
+        public int Y
         {
             get
             {
@@ -66,7 +68,8 @@ namespace Formatter
 
             //*other, comment*
             if (caseSwitch < 1)
-            {//comment
+            {
+                //comment
                 Function1();
             }
             else
@@ -98,12 +101,9 @@ namespace Formatter
         };
 
         //*expressions(initializers, switch expressions, patterns)*
-        int[] array = new int []
-        {
-            1, 2, 3
-        };
+        int[] array = new int[]
+                      {
+                          1, 2, 3
+                      };
     }
 }
-        
-
-

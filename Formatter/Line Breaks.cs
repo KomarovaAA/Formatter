@@ -12,6 +12,7 @@ namespace Formatter
 
     public class Line_Breaks
     {
+        //TODO Line Breaks/General
         public class General
         {
             //for General(Keep existing line breaks, Prefer wrap before ","﻿, Special "else if" treatment﻿,
@@ -46,6 +47,7 @@ namespace Formatter
             }
         }
 
+        //TODO Line Breaks/Arrangement of attributes
         public class ArrangementOfAttributes
         {
             //for Line Breaks/Arrangement of attributes(Place attribute section list on separate line if it is longer than﻿,
@@ -113,6 +115,7 @@ namespace Formatter
             }
         }
 
+        //TODO Line Breaks/Arrangement of method signatures
         public class ArrangementOfMethodSignatures
         {
             //for Arrangement of method signatures(Wrap formal parameters, Max formal parameters on a single line﻿,
@@ -136,6 +139,7 @@ namespace Formatter
             }
         }
 
+        //TODO Line Breaks/Arrangement of expression bodied members
         public class ArrangementOfExpressionBodiedMembers
         {
             //for Arrangement of expression bodied members﻿(Keep existing arrangement of expression bodied members﻿,
@@ -187,6 +191,7 @@ namespace Formatter
             }
         }
 
+        //TODO Line Breaks/Arrangement of type parameters
         public class ArrangementOfTypeParametersConstraintsAndBaseTypes﻿
         {
             //for Arrangement of type parameters, constraints and base types﻿(Allow type constraints on the same line﻿,
@@ -224,6 +229,7 @@ namespace Formatter
             }
         }
 
+        //TODO Line Breaks/Arrangement of declaration blocks
         public class ArrangementOfDeclarationBlocks
         {
             //for Line Breaks \ Arrangement of declaration blocks(Keep existing arrangement of declaration blocks,
@@ -280,6 +286,7 @@ namespace Formatter
             }
         }
 
+        //TODO Line Breaks/Arrangement of enumerations﻿
         public class ArrangementOfEnumerations﻿
         {
             //for Arrangement of enumerations﻿(Keep existing arrangement of enumeration﻿,
@@ -316,12 +323,15 @@ namespace Formatter
             }
         }
 
+        //TODO Line Breaks/Arrangement of statements
         public class ArrangementOfStatements﻿
         {
             //for Arrangement of statements﻿ (Place "while" on new line, Wrap "for" statement header﻿,
+            //Place “else” on new line, Place “catch” on new line, Place “finally” on new line
             //Wrap multiple declaration﻿)
 
             private int var1 = 1;
+            private int var2 = 0;
 
             void func()
             {
@@ -339,6 +349,36 @@ namespace Formatter
                     var1++;
                 }
                 while (1 > 2 && var1 < 10);
+
+                //*IF*
+                if (var1 == 0 && var2 < 4)
+                {
+                    var2 = 10;
+                }
+
+                else 
+                {
+                    var2 = 1;
+                }
+
+                //TRY
+                try
+                {
+                    foo();
+                }
+                catch (Exception e)
+                {
+                    foo();
+                }
+                finally
+                {
+                    foo();
+                }
+
+            }
+
+            private void foo()
+            {
             }
 
             //*multiple declaration*
@@ -346,6 +386,7 @@ namespace Formatter
                 age = "B";
         }
 
+        //TODO Line Breaks/Arrangement of embedded statements
         public class ArrangementOfEmbeddedStatements
         {
             //for Arrangement of embedded statements﻿(Keep existing arrangement of embedded statements﻿,
@@ -378,6 +419,7 @@ namespace Formatter
             }
         }
 
+        //TODO Line Breaks/Arrangement of embedded blocks
         public class ArrangementOfEmbeddedBlocks
         {
             //for Arrangement of embedded blocks(Keep existing arrangement of embedded blocks﻿,
@@ -404,6 +446,7 @@ namespace Formatter
             EventHandler e = delegate { return; };
         }
 
+        //TODO Line Breaks/Arrangement of switch expressions
         public class ArrangementOfSwitchExpressions
         {
             //for Arrangement of switch expressions(Keep existing arrangement of switch expressions﻿,
@@ -419,6 +462,7 @@ namespace Formatter
             };
         }
 
+        //TODO Line Breaks/Arrangement of property patterns﻿
         public class ArrangementOPropertyPatterns﻿
         {
             //for Arrangement of property patterns﻿(Keep existing arrangement of property patterns,
@@ -434,6 +478,7 @@ namespace Formatter
                 sourceObject is MyType { F1: 1, F2: 2 };
         }
 
+        //TODO Line Breaks/Arrangement of initializers
         public class ArrangementOfInitializers﻿
         {
             private object val1;
@@ -523,6 +568,7 @@ namespace Formatter
             //in the Program.cs file
         }
 
+        //TODO Line Breaks/Arrangement of member access expressions
         public class ArrangementOfMemberAccessExpressions
         {
             //Arrangement of member access expressions(Prefer wrap after "."﻿, Wrap chained method calls)
@@ -534,6 +580,7 @@ namespace Formatter
                 .Process();
         }
 
+        //TODO Line Breaks/Arrangement of member binary expressions
         public class ArrangementOfBinaryExpressions
         {
             //for Arrangement of binary expressions(﻿﻿Prefer wrap before operator in binary expression,
@@ -571,6 +618,7 @@ namespace Formatter
             }
         }
 
+        //TODO Line Breaks/Arrangement of ternary expressions
         public class ArrangementOfTernaryExpressions
         {
             //for Arrangement of ternary expressions(Prefer wrap before "?" and ":" in ternary expressions,
@@ -598,6 +646,7 @@ namespace Formatter
             // Nested ternary expression style in the Program.cs file
         }
 
+        //TODO Line Breaks/Arrangement of LINQ expressions
         public class ArrangementOfLINQExpressions
         {
             //for Arrangement of LINQ expressions(Wrap LINQ expressions, Place "into" on new line in LINQ expressions)
@@ -621,6 +670,7 @@ namespace Formatter
         }
     }
 
+    //TODO Line Breaks/Arrangement of interpolated strings
     public class ArrangementOfInterpolatedStrings
     {
         //for Arrangement of interpolated strings(Wrap verbatim interpolated strings﻿)

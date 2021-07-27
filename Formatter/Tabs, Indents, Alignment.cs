@@ -7,9 +7,10 @@ namespace Formatter
 
     public class Tabs__Indents__Alignment
     {
-        //for General (Use indent style and size from Visual Studio, Indent style, Indent size,
-        //Continuous line indent multiplier)
+        //TODO Tabs Indents Alignment/General
         class General
+            //for General (Use indent style and size from Visual Studio, Indent style, Indent size,
+            //Continuous line indent multiplier)
         {
             interface I
             {
@@ -29,6 +30,7 @@ namespace Formatter
             }
         }
 
+        //TODO Tabs Indents Alignment/Parenthesis
         public class Parenthesis
         {
             //Parenthesis(Use continuous line indent inside parenthesis, Indent method declarations' parenthes,
@@ -83,6 +85,7 @@ namespace Formatter
             }
         }
 
+        //TODO Tabs Indents Alignment/Preprocessor directives
         abstract class PreprocessorDirectives
         {
             //for Preprocessor directives﻿(Indent #region, #endregion, Indent #if, #else, #elif, #endif﻿, Indent other preprocessor directives)
@@ -114,6 +117,7 @@ namespace Formatter
             }
         }
 
+        //TODO Tabs Indents Alignment/Other Indents
         public class OtherIndents
         {
             //for Other Indents(Indent "case" from "switch"﻿,Indent type constraints﻿ )
@@ -143,6 +147,7 @@ namespace Formatter
             }
         }
 
+        //TODO Tabs Indents Alignment/Align Multiline constructs
         public class AlignMultilineConstructs
         {
             //for Align Multiline constructs(How to align when tabs are used for indents,
@@ -294,12 +299,14 @@ namespace Formatter
             }
         }
 
+        //TODO Tabs Indents Alignment/Align similar code in columns
         public class AlignSimilarCodeInColumns
         {
             //for /Align similar code in columns(Fix column alignment in adjacent lines, Fields and constants﻿, 
             //Properties and events, Simple methods, operators, delegates, Multiline method signature, 
             //Variables and local constants﻿, Other assignments and initializers﻿, Property patterns﻿,
-            //Nested ternary operators, Invocations of the same method﻿, Binary expressions﻿
+            //Nested ternary operators, Invocations of the same method﻿, Binary expressions﻿, Simple switch sections﻿,
+            //Switch expressions﻿,
             //End comments﻿
 
             //*fields and constants*
@@ -438,8 +445,49 @@ namespace Formatter
             };
 
             private static MyType sourceObject;
+            class Bank
+            {
+                public BankBranchStatus Status { get; set; }
+            }
+
+            enum BankBranchStatus
+            {
+                Open,
+                Closed,
+                VIPCustomersOnly
+            }
+
+            //*switch simple section*
+            static bool CheckIfCanWalkIntoBankSwitch(Bank bank, bool isVip)
+            {
+                bool result = false;
+
+                switch (bank.Status)
+                {
+                    case BankBranchStatus.Open: break;
+                    case BankBranchStatus.Closed: break;
+                    case BankBranchStatus.VIPCustomersOnly: break;
+                }
+
+                return result;
+            }
+
+            //*switch expressions*
+            static bool CheckIfCanWalkIntoBank(Bank bank, bool isVip)
+            {
+                var result = bank.Status switch
+                {
+                    BankBranchStatus.Open => true,
+                    BankBranchStatus.Closed => false,
+                    BankBranchStatus.VIPCustomersOnly => isVip
+                };
+
+                return result;
+            }
+            }
         }
     }
+    
 
     internal class MyType
     {
@@ -492,4 +540,5 @@ namespace Formatter
     internal class I1
     {
     }
-}
+
+

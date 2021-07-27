@@ -8,7 +8,7 @@ namespace Formatter
         // that in the following part of a code, the setting of parameter "Indent inside namespace declaration"
         // can be tested.
         // Comments like "//*field*" have created for quick navigation.
-        // In the Google document https://docs.google.com/document/d/1yBhHN_Erm-J7xBFGa-1mBx7mwxLaQ_fVVFfurJW-Iaw/edit#
+        // In the Google document https://docs.google.com/document/d/13Yrg8_23Dn1ogNF_GFQbkvctFEP9-DKbBRwcZZFMpxY/edit#
         // the parameters, that have already been added in the code, are highlighted in blue.
 
         static void Main(string[] args)
