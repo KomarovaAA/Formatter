@@ -15,6 +15,7 @@ namespace Formatter
         {
             Console.WriteLine("Hello World!");
 
+
             {
                 //TODO Tabs, Indents, Alignment/Other Indents(Outdent statement labels﻿)
                 //for Tabs, Indents, Alignment/Other Indents(Outdent statement labels﻿)
@@ -70,6 +71,7 @@ namespace Formatter
         private static bool dog;
         private static object cute;
         private static object boring;
+        private static int someRatherLongExpression;
     }
 
     internal class GenericList<T>

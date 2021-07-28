@@ -15,8 +15,10 @@ namespace Formatter
         //TODO Line Breaks/General
         public class General
         {
+            private int someRatherLongExpression;
+
             //for General(Keep existing line breaks, Prefer wrap before ","﻿, Special "else if" treatment﻿,
-            //Wrap long lines, Hard wrap at)
+            //Wrap long lines, Hard wrap at, Prefer wrap before "="﻿)
 
             int veryveryveryveryveryverylongnameofthefunction(
                 int firstParameter,
@@ -34,7 +36,8 @@ namespace Formatter
             {
                 if (caseSwitch == 1 || caseSwitch < 8)
                 {
-                    int one = 1;
+                    caseSwitch +=
+                        1;
                 }
                 else if (caseSwitch == 0)
                 {
@@ -44,7 +47,12 @@ namespace Formatter
                 {
                     int two = 2;
                 }
-            }  
+
+                //*Prefer wrap before "="﻿*(don't keep existing line breaks, Hard wrap at=67)
+                myObject.ImportantField +=
+                    someRatherLongExpression;
+            }
+
         }
 
         //TODO Line Breaks/Arrangement of attributes
@@ -670,6 +678,15 @@ namespace Formatter
         }
     }
 
+    internal class myObject
+    {
+        public static int ImportantField { get; internal set; }
+    }
+
+    internal class someRatherLongExpression
+    {
+    }
+
     //TODO Line Breaks/Arrangement of interpolated strings
     public class ArrangementOfInterpolatedStrings
     {
@@ -723,4 +740,3 @@ namespace Formatter
     {
     }
 }
-

@@ -297,10 +297,15 @@ namespace Formatter
                 fooCall(firstParameter
                     , secondParameter);
             }
+
+            abstract class Ab
+            {
+            }
+
         }
 
-        //TODO Tabs Indents Alignment/Align similar code in columns
-        public class AlignSimilarCodeInColumns
+    //TODO Tabs Indents Alignment/Align similar code in columns
+    public class AlignSimilarCodeInColumns
         {
             //for /Align similar code in columns(Fix column alignment in adjacent lines, Fields and constants﻿, 
             //Properties and events, Simple methods, operators, delegates, Multiline method signature, 
@@ -540,5 +545,6 @@ namespace Formatter
     internal class I1
     {
     }
+
 
 
